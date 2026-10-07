@@ -1,0 +1,17 @@
+{
+  "$schema": "https://schema.railpack.com",
+  "steps": {
+    "install": {
+      "commands": [
+        "mkdir -p wordpress",
+        "curl -fsSL https://wordpress.org/latest.tar.gz -o /tmp/wordpress.tar.gz",
+        "tar -xzf /tmp/wordpress.tar.gz --strip-components=1 -C wordpress",
+        "rm -f /tmp/wordpress.tar.gz",
+        "chmod +x start-container.sh"
+      ]
+    }
+  },
+  "deploy": {
+    "startCommand": "./start-container.sh php -S 0.0.0.0:${PORT:-80} -t wordpress"
+  }
+}

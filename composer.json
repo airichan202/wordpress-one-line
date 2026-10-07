@@ -1,0 +1,16 @@
+{
+  "name": "skalo/wordpress",
+  "description": "WordPress deployment for Skalo/Railpack",
+  "require": {
+    "php": ">=8.2",
+    "ext-curl": "*",
+    "ext-dom": "*",
+    "ext-fileinfo": "*",
+    "ext-gd": "*",
+    "ext-mbstring": "*",
+    "ext-mysqli": "*",
+    "ext-openssl": "*",
+    "ext-xml": "*",
+    "ext-zip": "*"
+  }
+}
